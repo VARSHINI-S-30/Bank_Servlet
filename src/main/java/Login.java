@@ -31,13 +31,13 @@ public class Login extends HttpServlet {
             if (rs.next()) {
                 response.sendRedirect("register.html");
             } else {
-                response.getWriter().println("<h3>Invalid credentials! Try again.</h3>");
+                response.getWriter().println("Invalid credentials! Try again");
             }
 
             con.close();
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().println("<h3>Error connecting to the database!</h3>");
+            response.getWriter().println("Error connecting to the database!");
         }
     }
 }
